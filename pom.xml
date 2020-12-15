@@ -12,6 +12,7 @@
   <modules>
     <module>producer_8000</module>
     <module>consumer_9000</module>
+    <module>common</module>
   </modules>
 
   <name>SpringCloudDemo</name>

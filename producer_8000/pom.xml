@@ -11,6 +11,12 @@
     <name>producer</name>
 
     <dependencies>
+        <dependency>
+            <groupId>com.lyh.springcloud</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- spring web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

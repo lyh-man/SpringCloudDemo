@@ -1,4 +1,4 @@
-package com.lyh.springcloud.consumer.tools;
+package com.lyh.springcloud.common.tools;
 
 import lombok.Data;
 import org.apache.http.HttpStatus;

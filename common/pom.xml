@@ -7,28 +7,10 @@
         <artifactId>SpringCloudDemo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>consumer</artifactId>
-
-    <name>consumer</name>
+    <artifactId>common</artifactId>
+    <name>common</name>
 
     <dependencies>
-        <dependency>
-            <groupId>com.lyh.springcloud</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <!-- 状态码参考地址：http://hc.apache.org/httpcomponents-core-ga/httpcore/apidocs/org/apache/http/HttpStatus.html -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -42,10 +24,15 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- 开启热部署 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

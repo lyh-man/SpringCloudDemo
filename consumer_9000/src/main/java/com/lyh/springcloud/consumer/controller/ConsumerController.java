@@ -1,7 +1,7 @@
 package com.lyh.springcloud.consumer.controller;
 
+import com.lyh.springcloud.common.tools.Result;
 import com.lyh.springcloud.consumer.entity.User;
-import com.lyh.springcloud.consumer.tools.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;

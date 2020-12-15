@@ -1,7 +1,7 @@
 package com.lyh.springcloud.producer.controller;
 
 
-import com.lyh.springcloud.producer.common.tools.Result;
+import com.lyh.springcloud.common.tools.Result;
 import com.lyh.springcloud.producer.entity.User;
 import com.lyh.springcloud.producer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
