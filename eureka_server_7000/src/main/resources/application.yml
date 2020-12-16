@@ -1,0 +1,14 @@
+server:
+  port: 7000
+
+eureka:
+  instance:
+    hostname: localhost
+    appname: Eureka-Server # 设置服务端实例名称，优先级高于 spring.application.name
+    instance-id: eureka-server-instance1 # 设置实例 ID
+  client:
+    register-with-eureka: false # 默认为 true，设置 false 表示不向注册中心注册自己
+    fetch-registry: false # 默认为 true，设置 false 表示不去注册中心 获取 注册信息
+    # 设置 Eureka 服务器地址，类型为 HashMap，默认为：serviceUrl.put("defaultZone", "http://localhost:8761/eureka/");
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

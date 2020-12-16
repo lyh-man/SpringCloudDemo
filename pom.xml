@@ -13,6 +13,7 @@
     <module>producer_8000</module>
     <module>consumer_9000</module>
     <module>common</module>
+    <module>eureka_server_7000</module>
   </modules>
 
   <name>SpringCloudDemo</name>
@@ -24,6 +25,7 @@
     <httpcore.version>4.4.13</httpcore.version>
     <lombok.version>1.18.12</lombok.version>
     <java.version>1.8</java.version>
+    <springcloud.version>Hoxton.SR9</springcloud.version>
   </properties>
 
   <!-- springboot -->
@@ -35,6 +37,14 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${springcloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
       <!-- mybatis-plus -->
       <dependency>
         <groupId>com.baomidou</groupId>
