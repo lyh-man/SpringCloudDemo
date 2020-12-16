@@ -14,6 +14,15 @@
     <module>consumer_9000</module>
     <module>common</module>
     <module>eureka_server_7000</module>
+    <module>eureka_client_consumer_9001</module>
+    <module>eureka_client_producer_8001</module>
+    <module>eureka_server_7001</module>
+    <module>eureka_server_7002</module>
+    <module>eureka_server_7003</module>
+    <module>eureka_client_producer_8002</module>
+    <module>eureka_client_producer_8003</module>
+    <module>eureka_client_producer_8004</module>
+    <module>eureka_client_consumer_9002</module>
   </modules>
 
   <name>SpringCloudDemo</name>
