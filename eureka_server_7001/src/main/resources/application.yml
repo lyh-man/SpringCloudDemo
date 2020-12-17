@@ -2,6 +2,9 @@ server:
   port: 7001
 
 eureka:
+  server:
+    enable-self-preservation: false # 关闭自我保护模式
+    eviction-interval-timer-in-ms: 2000 # 清理无效服务的间隔
   instance:
     hostname: eureka.server.7001.com # 定义主机名
     appname: Eureka-Server # 设置服务端实例名称，优先级高于 spring.application.name
