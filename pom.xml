@@ -25,6 +25,10 @@
     <module>eureka_client_consumer_9002</module>
     <module>zookeeper_client_producer_8005</module>
     <module>zookeeper_client_consumer_9003</module>
+    <module>zookeeper_client_producer_8006</module>
+    <module>zookeeper_client_producer_8007</module>
+    <module>zookeeper_client_producer_8008</module>
+    <module>zookeeper_client_consumer_9004</module>
   </modules>
 
   <name>SpringCloudDemo</name>

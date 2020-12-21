@@ -1,5 +1,5 @@
 server:
-  port: 8005
+  port: 8006
 spring:
   application:
     name: zookeeper-client-producer
@@ -12,4 +12,4 @@ spring:
     # zookeeper 配置
     zookeeper:
       # 配置连接 zookeeper 服务器的地址
-      connect-string: 120.26.184.41:2181
+      connect-string: 120.26.184.41:2181, 120.26.184.41:2182, 120.26.184.41:2183
