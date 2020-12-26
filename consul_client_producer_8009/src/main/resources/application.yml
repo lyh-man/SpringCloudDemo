@@ -1,0 +1,34 @@
+server:
+  port: 8009
+
+spring:
+  application:
+    name: consul_client_producer
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://120.26.184.41:3306/producer?useUnicode=true&characterEncoding=utf8
+  cloud:
+    # 配置 consul 信息
+    consul:
+      # 配置注册中心地址
+      host: localhost
+      # 配置访问端口号
+      port: 8500
+      # 配置服务提供者信息(非必须配置)
+      discovery:
+        # 是否需要注册
+        register: true
+        # 配置实例 ID
+        instance-id: ${spring.application.name}-${server.port}
+        # 配置服务名
+        service-name: ${spring.application.name}
+        # 配置服务端口
+        port: ${server.port}
+        # 使用 ip 地址而非主机名
+        prefer-ip-address: true
+        # 设置健康检查路径
+        health-check-url: http://${spring.cloud.client.ip-address}:${server.port}/actuator/health
+        # 健康检查失败后，自动剔除服务（单位 s 表示秒，m 表示分钟）
+        health-check-critical-timeout: 10s

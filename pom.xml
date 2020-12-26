@@ -29,6 +29,7 @@
     <module>zookeeper_client_producer_8007</module>
     <module>zookeeper_client_producer_8008</module>
     <module>zookeeper_client_consumer_9004</module>
+    <module>consul_client_producer_8009</module>
   </modules>
 
   <name>SpringCloudDemo</name>
