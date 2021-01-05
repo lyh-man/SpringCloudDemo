@@ -19,3 +19,13 @@ eureka:
 EUREKA-CLIENT-PRODUCER:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+# 设置 OpenFeign 超时时间（OpenFeign 默认支持 Ribbon）
+ribbon:
+  # 指的是建立连接所用的超时时间
+  ConnectTimeout: 3000
+  # 指的是建立连接后从服务器获取资源的超时时间（即请求处理的超时时间）
+  ReadTimeout: 4000
+logging:
+  level:
+    com.lyh.springcloud.eureka_client_consumer_9006.service.ProducerFeignService: debug

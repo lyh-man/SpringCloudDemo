@@ -37,5 +37,15 @@ public class UserController {
         }
         return Result.ok(true, 200, "create data success").data("ip", (hostname + ":" + port));
     }
+
+    @GetMapping("/testTimeout")
+    public Result testFeignTimeout() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return Result.ok();
+    }
 }
 

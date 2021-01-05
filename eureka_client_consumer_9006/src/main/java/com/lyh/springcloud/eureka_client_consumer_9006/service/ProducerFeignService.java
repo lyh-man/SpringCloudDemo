@@ -11,4 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface ProducerFeignService {
     @GetMapping("/producer/user/get/{id}")
     Result getUser(@PathVariable Integer id);
+
+    @GetMapping("/producer/user/testTimeout")
+    Result testFeignTimeout();
 }

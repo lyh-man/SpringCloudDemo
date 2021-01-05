@@ -18,4 +18,9 @@ public class ConsumerController {
     public Result getUser(@PathVariable Integer id) {
         return producerFeignService.getUser(id);
     }
+
+    @GetMapping("/testTimeout")
+    public Result testFeignTimeout() {
+        return producerFeignService.testFeignTimeout();
+    }
 }
