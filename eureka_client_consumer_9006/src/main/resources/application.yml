@@ -1,0 +1,21 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: eureka-client-consumer
+
+eureka:
+  instance:
+    appname: eureka-client-consumer # 优先级比 spring.application.name 高
+    instance-id: eureka-client-consumer-instance3  # 设置当前实例 ID
+    hostname: eureka.client.consumer.9006 # 设置主机名
+  client:
+    register-with-eureka: true # 默认为 true，注册到 注册中心
+    fetch-registry: true # 默认为 true，从注册中心 获取 注册信息
+    service-url:
+      # 指向 注册中心 地址，注册到 集群所有的 注册中心。
+      defaultZone: http://eureka.server.7001.com:7001/eureka,http://eureka.server.7002.com:7002/eureka,http://eureka.server.7003.com:7003/eureka
+
+EUREKA-CLIENT-PRODUCER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
