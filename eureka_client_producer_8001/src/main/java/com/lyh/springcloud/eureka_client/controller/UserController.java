@@ -13,6 +13,16 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/testTimeout")
+    public Result testTimeout() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return Result.ok();
+    }
+
     @GetMapping("/get/{id}")
     public Result getUser(@PathVariable Integer id) {
         User user = userService.getById(id);

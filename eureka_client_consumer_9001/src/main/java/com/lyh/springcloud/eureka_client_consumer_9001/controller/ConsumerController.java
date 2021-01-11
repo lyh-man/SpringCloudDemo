@@ -18,6 +18,11 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @GetMapping("/testTimeout")
+    public Result testTimeout() {
+        return restTemplate.getForObject(PRODUCER_URL + "/producer/user/testTimeout", Result.class);
+    }
+
     @GetMapping("/get/{id}")
     public Result getUser(@PathVariable Integer id) {
         return restTemplate.getForObject(PRODUCER_URL + "/producer/user/get/" + id, Result.class);
