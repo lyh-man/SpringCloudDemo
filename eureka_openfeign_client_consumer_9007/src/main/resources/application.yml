@@ -1,0 +1,28 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: eureka-openfeign-client-consumer
+
+eureka:
+  instance:
+    appname: eureka-openfeign-client-consumer-9007 # 优先级比 spring.application.name 高
+    instance-id: ${eureka.instance.appname} # 设置当前实例 ID
+  client:
+    register-with-eureka: true # 默认为 true，注册到 注册中心
+    fetch-registry: true # 默认为 true，从注册中心 获取 注册信息
+    service-url:
+      # 指向 注册中心 地址，也即 eureka_server_7000 的地址。
+      defaultZone: http://localhost:7000/eureka
+
+# 设置 OpenFeign 超时时间（OpenFeign 默认支持 Ribbon）
+ribbon:
+  # 指的是建立连接所用的超时时间
+  ConnectTimeout: 2000
+  # 指的是建立连接后从服务器获取资源的超时时间（即请求处理的超时时间）
+  ReadTimeout: 2000
+
+# 开启服务降级
+feign:
+  hystrix:
+    enabled: true

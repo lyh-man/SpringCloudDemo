@@ -32,6 +32,7 @@
     <module>consul_client_producer_8009</module>
     <module>eureka_client_consumer_9005</module>
     <module>eureka_client_consumer_9006</module>
+    <module>eureka_openfeign_client_consumer_9007</module>
   </modules>
 
   <name>SpringCloudDemo</name>
