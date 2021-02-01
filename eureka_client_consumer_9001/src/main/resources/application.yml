@@ -15,3 +15,7 @@ eureka:
       # 指向 注册中心 地址，也即 eureka_server_7000 的地址。
       defaultZone: http://localhost:7000/eureka
 
+# 开启 sentinel 对 feign 的支持
+feign:
+  sentinel:
+    enabled: true
