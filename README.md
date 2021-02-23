@@ -7,3 +7,5 @@
 [学习一下 SpringCloud （二）-- 服务注册中心 Eureka、Zookeeper、Consul、Nacos](https://www.cnblogs.com/l-y-h/p/14193443.html)
 
 [学习一下 SpringCloud （三）-- 服务调用、负载均衡 Ribbon、OpenFeign](https://www.cnblogs.com/l-y-h/p/14238203.html)
+
+[学习一下 SpringCloud （四）-- 服务降级、熔断 Hystrix、Sentinel](https://www.cnblogs.com/l-y-h/p/14364167.html)
