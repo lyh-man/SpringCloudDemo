@@ -14,6 +14,20 @@ spring:
           # 配置文件搜索路径
           search-paths:
             - SpringCloudConfig
+  # rabbitmq 配置
+  rabbitmq:
+    username: root
+    password: root
+    host: 120.26.184.41
+    port: 5672
+
+# 暴露监控端点（busrefresh，或者直接写 *）
+management:
+  endpoints:
+    web:
+      exposure:
+        # include: "*"
+        include: "busrefresh"
 
 eureka:
   instance:
