@@ -1,0 +1,11 @@
+server:
+  port: 7102
+
+spring:
+  application:
+    name: nacos-client
+  cloud:
+    nacos:
+      discovery:
+        # 配置 nacos 地址
+        server-addr: 120.26.184.41:8848
