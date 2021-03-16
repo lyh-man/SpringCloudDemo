@@ -1,0 +1,26 @@
+server:
+  port: 7100
+
+spring:
+  application:
+    name: nacos-client-config
+  cloud:
+    nacos:
+      discovery:
+        # 配置 nacos server 地址（作为注册中心）
+        server-addr: 120.26.184.41:8848
+      config:
+        # 配置 nacos server 地址（作为配置中心）
+        server-addr: 120.26.184.41:8848
+        # 设置配置文件前缀，默认为 ${spring.application.name}
+        prefix: ${spring.application.name}
+        # 设置配置文件后缀名
+        file-extension: yml
+        shared-configs[0]:
+          data-id: test-0-dev.yml
+        shared-configs[1]:
+          data-id: test-1-dev.yml
+        shared-configs[2]:
+          data-id: test-2-dev.yml
+          group: DEFAULT_GROUP
+          refresh: true

@@ -1,11 +1,9 @@
-server:
-  port: 7100
-
 spring:
-  application:
-    name: nacos-client
-  cloud:
-    nacos:
-      discovery:
-        # 配置 nacos 地址
-        server-addr: 120.26.184.41:8848
+  profiles:
+    active: dev
+
+config:
+  info: ${spring.application.name}-${server.port}-${spring.profiles.active}
+  test-0: test-0
+  test-1: test-1
+  test-2: test-2
