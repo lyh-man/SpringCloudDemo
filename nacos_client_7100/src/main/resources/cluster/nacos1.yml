@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  nacos1:
+    image: nacos/nacos-server:1.4.1
+    container_name: nacos1
+    restart: always
+    environment:
+      - NACOS_SERVERS=192.168.157.128:8849 192.168.157.129:8850 192.168.157.130:8851
+      - NACOS_SERVER_IP=192.168.157.128
+      - NACOS_APPLICATION_PORT=8849
+      - TZ=Asia/Shanghai
+      - SPRING_DATASOURCE_PLATFORM=mysql
+      - MYSQL_SERVICE_HOST=192.168.157.128
+      - MYSQL_SERVICE_PORT=3308
+      - MYSQL_SERVICE_DB_NAME=nacos_devtest
+      - MYSQL_SERVICE_USER=root
+      - MYSQL_SERVICE_PASSWORD=root
+      - JVM_XMS=100m
+      - JVM_MMS=100m
+    volumes:
+      - ./nacos1:/home/nacos/logs
+    ports:
+      - 8849:8849

@@ -8,10 +8,17 @@ spring:
     nacos:
       discovery:
         # 配置 nacos server 地址（作为注册中心）
-        server-addr: 120.26.184.41:8848
+        # server-addr: 120.26.184.41:8848
+        # server-addr: 120.26.184.41:8849,120.26.184.41:8850,120.26.184.41:8851
+        # 使用 nginx 时，配置 nginx 地址即可
+        server-addr: 192.168.157.128:10080
+#        server-addr: 192.168.157.128:8849,192.168.157.129:8850,192.168.157.130:8851
       config:
         # 配置 nacos server 地址（作为配置中心）
-        server-addr: 120.26.184.41:8848
+        # server-addr: 120.26.184.41:8848
+        # server-addr: 120.26.184.41:8849,120.26.184.41:8850,120.26.184.41:8851
+        server-addr: 192.168.157.128:10080
+#        server-addr: 192.168.157.128:8849,192.168.157.129:8850,192.168.157.130:8851
         # 设置配置文件前缀，默认为 ${spring.application.name}
         prefix: ${spring.application.name}
         # 设置配置文件后缀名
