@@ -39,6 +39,7 @@
     <module>nacos_client_7101</module>
     <module>nacos_client_7102</module>
     <module>nacos_client_consumer</module>
+    <module>gateway_7200</module>
   </modules>
 
   <name>SpringCloudDemo</name>
